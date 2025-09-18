@@ -93,13 +93,4 @@ cd Tuneify-FullStack-Project
 - Contributions, issues, and feature requests are welcome!
 - Feel free to fork this repo and submit a pull request.
 
-  
----
-
-👉 Is README me maine **tech stack, setup guide, env vars, features, structure sab cover kar liya**.  
-Tu chahe to isme screenshots / demo GIFs bhi add kar sakta hai for better presentation.  
-
-Bata — kya mai tujhe ek **badhiya project logo/banner (Tuneify naam ka)** bhi bana du jo README ke top pe lage?
-
-## 📂 Project Structure
 
