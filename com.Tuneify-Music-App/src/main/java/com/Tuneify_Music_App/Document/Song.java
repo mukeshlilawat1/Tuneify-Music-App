@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "song")
+@Document(collection = "song") // <-- fixed here
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
