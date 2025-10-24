@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "albums")
+@Document(collection = "albums")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,3 +23,4 @@ public class Album {
     private String background_colour;
     private String image_url;
 }
+

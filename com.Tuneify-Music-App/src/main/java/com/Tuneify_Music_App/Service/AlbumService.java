@@ -1,6 +1,7 @@
 package com.Tuneify_Music_App.Service;
 
 import com.Tuneify_Music_App.Document.Album;
+import com.Tuneify_Music_App.Dto.AlbumListResponse;
 import com.Tuneify_Music_App.Dto.AlbumRequest;
 import com.Tuneify_Music_App.Repository.AlbumRepository;
 import com.cloudinary.Cloudinary;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -29,4 +31,14 @@ public class AlbumService {
         return albumRepository.save(newAlbum);
     }
 
+
+    public AlbumListResponse getAllAlbums() {
+        return new AlbumListResponse(true, albumRepository.findAll());
+    }
+
+    public Boolean removeAlbum(String id){
+       Album existingAlbum = albumRepository.findById(id).orElseThrow(() -> new RuntimeException("Album not found"));
+       albumRepository.delete(existingAlbum);
+       return true;
+    }
 }
