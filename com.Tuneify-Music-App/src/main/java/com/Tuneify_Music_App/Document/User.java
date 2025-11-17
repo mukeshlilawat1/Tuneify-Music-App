@@ -22,7 +22,7 @@ public class User {
     private String email;
     private String password;
     private Role role = Role.USER;
-    private enum Role {
+    public enum Role {
         USER,
         ADMIN
     }
