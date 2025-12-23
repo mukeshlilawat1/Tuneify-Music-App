@@ -22,6 +22,7 @@ public class AuthController {
         return  "this is login api";
     }
 
+//    register
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest registerRequest) {
         try {
