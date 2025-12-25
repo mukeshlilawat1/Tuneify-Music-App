@@ -5,6 +5,7 @@ import com.Tuneify_Music_App.Dto.RegisterRequest;
 import com.Tuneify_Music_App.Dto.UserResponse;
 import com.Tuneify_Music_App.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -32,5 +33,10 @@ public class UserService {
                 .id(newUser.getId())
                 .email(newUser.getEmail())
                 .role(UserResponse.Role.USER).build();
+    }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 }
